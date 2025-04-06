@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --nav-height: 80px; /* Set the height of the navigation bar */
+}
+html, body {
+    height: 100%; /* Allow the height to adjust based on content */
+    width: 100%; 
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+img {
+    display: block;
+}
+
+nav {
+    display: flex; /* Use flexbox to align items horizontally */
+    flex-direction: row; /* Ensure items are aligned in a row */
+    align-items: center; /* Vertically align the logo and links */
+    justify-content: space-between; /* Add space between the logo and links */
+    height: var(--nav-height); /* Use the variable for the navigation height */
+    padding: 0; /* Add horizontal padding */
+    background-color: #0168A3; /* Ensure the background color is visible */
+    z-index: 1000; /* Ensure it appears above other elements */
+    position: fixed; /* Keep the nav fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+#mqsto_na_ikonkata {
+    display: flex; /* Ensure the logo container is visible */
+    align-items: center; /* Center the logo vertically */
+    justify-content: flex-start; /* Align the logo to the left */
+    width: 20%; /* Adjust the width of the logo container */
+    height: 100%; /* Fill the height of the nav */
+}
+
+#logoto {
+    max-width: 100%; /* Ensure the logo fits within its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+#stranici {
+    display: flex; /* Use flexbox for the navigation links */
+    flex-direction: row; /* Align links horizontally */
+    align-items: center; /* Center the links vertically */
+    justify-content: flex-end; /* Align the links to the right */
+    width: 80%; /* Adjust the width of the navigation links container */
+    height: 100%; /* Fill the height of the nav */
+}
+.stranica {
+    text-align: center; /* Center the text */
+    display: flex; /* Ensure the links are visible */
+    align-items: center;
+    justify-content: center;
+    background-color: #79CAF9; /* Ensure the background color is visible */
+    height: 100%; /* Allow the height to adjust */
+    width: 30%;
+    padding: 10px; /* Add padding for better spacing */
+  
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+.stranica:hover {
+    background-color: #3772FF; /* Ensure hover effect works */
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: black; /* Ensure the text color is visible */
+}
+.manqci {
+   
+    width: 100%;
+    height: 50%; 
+    background-color: #7284A8;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly; 
+    gap: 20px; 
+    padding: 10px;
+    
+}
+#adasha
+{
+    margin-top: 4%;
+}
+.manqci img {
+    max-width: 40%; 
+    height: 80%; 
+    display: block; 
+    object-fit: cover;
+}
+.description {
+   
+    width: 100%;
+    height:auto;
+   
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content:center; 
+    text-align: center;
+ 
+  
+
+    
+}
+.description h1 {
+    margin: 0; 
+    
+    font-size: 2rem; 
+}
+.description p {
+    margin:  auto 0; 
+    width: 80%; 
+    text-align: left; 
+    line-height: 1.5; 
+}
+.news  
+{
+    
+    
+    width: 100%; 
+    overflow: visible; 
+}
+#parva_novina
+{
+    margin-top: var(--nav-height);
+    background-color:red;
+   
+ 
+}
+#mapa
+{
+    margin-top: var(--nav-height);
+}
+#igikona
+{
+    width: 20%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 10px auto 0; 
+}
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:#1C1F33;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px; 
+    z-index: 1000;
+}
+
+
+

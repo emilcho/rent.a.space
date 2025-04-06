@@ -1,0 +1,114 @@
+@media screen and (max-width: 768px) {
+    :root {
+        --nav-height1: 320px; /* Set a fixed height for the navigation bar */
+    }
+
+    html, body {
+        height: auto; /* Allow the height to adjust based on content */
+        width: 100%; 
+        overflow-x: hidden; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        height: var(--nav-height1); /* Use the variable for the navigation height */
+        padding: 3px;
+        display: flex; /* Ensure the navigation bar wraps its content */
+        align-items: center; /* Center the content horizontally */
+        justify-content: center; /* Center the content vertically */
+        background-color: #0168A3; /* Ensure the background color is visible */
+        overflow: visible; /* Allow content to flow properly */
+        box-sizing: border-box; /* Include padding in height calculations */
+    }
+
+    #mqsto_na_ikonkata {
+        width: 50%; /* Full width for the logo */
+        justify-content: center; /* Center the logo */
+        margin-bottom: 5px; /* Add spacing below the logo */
+        height: auto; /* Let the height adjust based on the content */
+        display: flex; /* Ensure the container is visible */
+        align-items: center; /* Center the logo vertically */
+    }
+
+    #logoto {
+        max-width: 100%; /* Ensure the logo fits within its container */
+        height: 100%; /* Maintain the aspect ratio */
+    }
+
+    #stranici {
+        width: 100%; /* Full width for navigation links */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center the links */
+        gap: 10px;
+        display: flex; /* Ensure the container is visible */
+        height: 60%;
+    }
+
+    .stranica {
+        width: 90%; /* Make links take up most of the screen width */
+        max-width: 300px; /* Optional: Set a maximum width for the buttons */
+        text-align: center; /* Center the text */
+        display: flex; /* Ensure the links are visible */
+        align-items: center;
+        justify-content: center;
+        background-color: #79CAF9; /* Ensure the background color is visible */
+        height: auto; /* Allow the height to adjust */
+        padding: 10px; /* Add padding for better spacing */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-sizing: border-box; /* Include padding in width calculations */
+        z-index: 1000; /* Ensure it appears above other elements */
+    }
+
+    .stranica:hover {
+        background-color: #3772FF; /* Ensure hover effect works */
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        color: black; /* Ensure the text color is visible */
+    }
+
+    #parva_novina {
+        margin-top: var(--nav-height1) ; /* Push the news section below the navigation bar */
+        background-color: red;
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .manqci {
+        flex-direction: column; /* Stack image and description vertically */
+        align-items: center; /* Center content */
+        gap: 20px; /* Add spacing between image and description */
+        padding: 10px; /* Add padding */
+    }
+
+    .manqci img {
+        max-width: 80%; /* Reduce image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .manqci:first-of-type {
+        margin-top: 0; /* Remove unnecessary margin */
+        padding-top: var(--nav-height1); /* Add padding to account for the fixed nav height */
+    }
+
+    .description {
+        width: 90%; /* Reduce width of the description */
+        text-align: center; /* Center-align text */
+    }
+
+    .description h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .description p {
+        font-size: 1rem; /* Adjust paragraph font size */
+        line-height: 1.4; /* Improve readability */
+    }
+}
