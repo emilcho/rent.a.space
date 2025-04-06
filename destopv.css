@@ -88,7 +88,10 @@ a {
 }
 #adasha
 {
-    margin-top: 4%;
+  
+        margin-top: var(--nav-height); /* Add padding to account for the navbar height */
+       
+        height: auto;
 }
 .manqci img {
     max-width: 40%; 

@@ -76,7 +76,8 @@
     }
 
     #parva_novina {
-        margin-top: var(--nav-height1) ; /* Push the news section below the navigation bar */
+        margin-top: 0; /* Remove unnecessary space */
+        padding-top: var(--nav-height1); /* Add padding to account for the navbar height */
         background-color: red;
         height: auto; /* Allow the height to adjust based on content */
     }
