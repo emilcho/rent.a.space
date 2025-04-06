@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
     :root {
-        --nav-height1: 320px; /* Set a fixed height for the navigation bar */
+        --nav-height1: 270px; /* Set a fixed height for the navigation bar */
     }
 
     html, body {
@@ -17,9 +17,9 @@
 
     nav {
         flex-direction: column; /* Stack items vertically */
-        height: var(--nav-height1); /* Use the variable for the navigation height */
-        padding: 3px;
-        display: flex; /* Ensure the navigation bar wraps its content */
+        height: auto; /* Let the height adjust dynamically */
+        padding: 5px 0; /* Reduce padding to remove extra space */
+        display: flex-start; /* Ensure the navigation bar wraps its content */
         align-items: center; /* Center the content horizontally */
         justify-content: center; /* Center the content vertically */
         background-color: #0168A3; /* Ensure the background color is visible */
@@ -28,17 +28,17 @@
     }
 
     #mqsto_na_ikonkata {
-        width: 50%; /* Full width for the logo */
+        width: 40%; /* Full width for the logo */
         justify-content: center; /* Center the logo */
         margin-bottom: 5px; /* Add spacing below the logo */
-        height: auto; /* Let the height adjust based on the content */
+        height: auto; /* Let the height adjust dynamically */
         display: flex; /* Ensure the container is visible */
         align-items: center; /* Center the logo vertically */
     }
 
     #logoto {
         max-width: 100%; /* Ensure the logo fits within its container */
-        height: 100%; /* Maintain the aspect ratio */
+        height: auto; /* Maintain the aspect ratio */
     }
 
     #stranici {
@@ -47,7 +47,7 @@
         align-items: center; /* Center the links */
         gap: 10px;
         display: flex; /* Ensure the container is visible */
-        height: 60%;
+        height: 50%;
     }
 
     .stranica {
