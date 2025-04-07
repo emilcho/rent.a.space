@@ -167,5 +167,16 @@ a {
     z-index: 1000;
 }
 
-
+#login_sait{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #79CAF9;
+        height: 100%;
+        width: 30%;
+        padding: 10px;
+        z-index: 1000;
+    
+}
 

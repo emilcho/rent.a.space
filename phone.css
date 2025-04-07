@@ -1,10 +1,10 @@
 @media screen and (max-width: 768px) {
     :root {
-        --nav-height1: 270px; /* Set a fixed height for the navigation bar */
+        --nav-height1: 40%; /* Set a fixed height for the navigation bar */
     }
 
     html, body {
-        height: auto; /* Allow the height to adjust based on content */
+        height: 200vh; /* Allow the height to adjust based on content */
         width: 100%; 
         overflow-x: hidden; 
         display: flex;
@@ -80,6 +80,8 @@
         padding-top: var(--nav-height1); /* Add padding to account for the navbar height */
         background-color: red;
         height: auto; /* Allow the height to adjust based on content */
+        display: flex;
+        flex-direction: column;
     }
 
     .manqci {
@@ -111,5 +113,8 @@
     .description p {
         font-size: 1rem; /* Adjust paragraph font size */
         line-height: 1.4; /* Improve readability */
+    }
+    #login_sait{
+        width:80%;
     }
 }
