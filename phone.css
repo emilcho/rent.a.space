@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
     :root {
-        --nav-height1: 40%; /* Set a fixed height for the navigation bar */
+        --nav-height1: 210px; /* Set a fixed height for the navigation bar */
     }
 
     html, body {
@@ -76,8 +76,8 @@
     }
 
     #parva_novina {
-        margin-top: 0; /* Remove unnecessary space */
-        padding-top: var(--nav-height1); /* Add padding to account for the navbar height */
+       
+        padding-top: 210px; /* Add padding to account for the navbar height */
         background-color: red;
         height: auto; /* Allow the height to adjust based on content */
         display: flex;
@@ -114,7 +114,5 @@
         font-size: 1rem; /* Adjust paragraph font size */
         line-height: 1.4; /* Improve readability */
     }
-    #login_sait{
-        width:80%;
-    }
+   
 }
