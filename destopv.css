@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --nav-height: 80px; /* Set the height of the navigation bar */
+    --nav-height: 120px; /* Set the height of the navigation bar */
 }
 html, body {
     height: 100%; /* Allow the height to adjust based on content */
@@ -12,63 +12,112 @@ html, body {
     overflow-x: hidden; 
     display: flex;
     flex-direction: column;
+    
+
+}
+.body
+{
+background-image:url(snimki/background.jpg);
+background-size:contain/* Cover the entire viewport */
+
 }
 img {
     display: block;
 }
 
 nav {
-    display: flex; /* Use flexbox to align items horizontally */
-    flex-direction: row; /* Ensure items are aligned in a row */
-    align-items: center; /* Vertically align the logo and links */
-    justify-content: space-between; /* Add space between the logo and links */
-    height: var(--nav-height); /* Use the variable for the navigation height */
-    padding: 0; /* Add horizontal padding */
-    background-color: #0168A3; /* Ensure the background color is visible */
-    z-index: 1000; /* Ensure it appears above other elements */
-    position: fixed; /* Keep the nav fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box; /* Include padding in width calculations */
-}
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    position: fixed; /* Fix the navbar at the top */
+    top:0;
+    height: auto;
+    width: 54%; /* Full width */
+    left:23%;
+    right:23%;
+    backdrop-filter: blur(10px); /* Add a blur effect to the background */
+    border-radius: 15px; 
+    box-shadow: 0 0 30px rgba(227,228, 237, 0.37); /* Add a shadow effect */
+    flex-direction: row; /* Align items in a row */
+    display: flex; /* Use flexbox for the navigation bar */
 
+
+}
 #mqsto_na_ikonkata {
-    display: flex; /* Ensure the logo container is visible */
-    align-items: center; /* Center the logo vertically */
-    justify-content: flex-start; /* Align the logo to the left */
-    width: 20%; /* Adjust the width of the logo container */
-    height: 100%; /* Fill the height of the nav */
-}
-
-#logoto {
-    max-width: 100%; /* Ensure the logo fits within its container */
-    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain;/* Fill the height of the nav */
+    
 }
 #stranici {
     display: flex; /* Use flexbox for the navigation links */
     flex-direction: row; /* Align links horizontally */
     align-items: center; /* Center the links vertically */
     justify-content: flex-end; /* Align the links to the right */
-    width: 80%; /* Adjust the width of the navigation links container */
+    width: 100%; /* Adjust the width of the navigation links container */
     height: 100%; /* Fill the height of the nav */
+    backdrop-filter: blur(10px); /* Add a blur effect to the background */
+    border-radius: 15px; 
+    box-shadow: 0 0 30px rgba(144, 153, 235, 0.37); /* Add a shadow effect */
+
+    
 }
 .stranica {
-    text-align: center; /* Center the text */
-    display: flex; /* Ensure the links are visible */
+    display: inline-flex; /* Ensure the links are visible */
     align-items: center;
     justify-content: center;
-    background-color: #79CAF9; /* Ensure the background color is visible */
     height: 100%; /* Allow the height to adjust */
-    width: 30%;
+    flex-grow: 1; /* Distribute space equally when no one is hovered */
     padding: 10px; /* Add padding for better spacing */
-  
-    z-index: 1000; /* Ensure it appears above other elements */
-}
-.stranica:hover {
-    background-color: #3772FF; /* Ensure hover effect works */
+    position: relative; /* Make the container a positioning context */
+    transition: all 0.3s ease-in-out; /* Smooth transition for size changes */
+    flex-direction: row;
+    
 }
 
+.stranica img {
+    position: relative; /* Default position */
+    transition: all 0.3s ease-in-out; /* Smooth transition for movement and scaling */
+}
+
+.stranica:hover {
+    flex-grow:1; /* Increase the size of the hovered element */
+    height: 100%; /* Slightly increase the height */
+    display: flex; 
+    
+}
+
+.stranica:hover img {
+    
+   
+    transform: scale(1.0); /* Make the image slightly larger */
+    transition: all 0.4s ease-in-out; /* Smooth scaling and movement transition */
+    transform: translateX(-80px);    
+}
+
+/* Apply effects to other elements when one is hovered */
+.stranica:not(:hover) {
+    flex-grow: 0.7; /* Make the non-hovered elements smaller */
+    height: 90%; /* Slightly reduce the height */
+    transition: all 0.3s ease-in-out; /* Smooth transition for size changes */
+}
+
+.stranica:not(:hover) img {
+    transform: scale(1); /* Slightly enlarge the images of non-hovered elements */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+.stranica .hover-text {
+    opacity: 0; /* Hide the text by default */
+    position: absolute; /* Allow the text to move independently */
+    top: 57%; /* Start vertically centered */
+    left: 50%; /* Start horizontally centered */
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 1.3rem; /* Adjust font size */
+    color: black; /* Text color */
+    font-weight: bold; /* Italicize the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for visibility and position */
+    z-index: 1; /* Ensure the text is above other elements */
+}
+.stranica:hover .hover-text {
+    opacity: 1; /* Show the text on hover */
+}
 a {
     text-decoration: none;
     display: block;
